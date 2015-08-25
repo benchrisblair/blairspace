@@ -1,13 +1,14 @@
-// $(document).ready(function() {
-// 	$(window).on('scroll', function() {
-// 		var scrollPosition = window.scrollY;
-		
-// 		if (scrollPosition >= 800) {
-// 			$('.navbar').removeClass('navbar-static-top');
-// 			$('.navbar').addClass('navbar-fixed-top');
-// 		} else {
-// 			$('.navbar').removeClass('navbar-fixed-top');
-// 			$('.navbar').addClass('navbar-static-top');
-// 		}
-// 	});
-// });
+$(document).ready(function() {
+	$(document).on("click", ".navbar-toggle", function(event) {
+		event.preventDefault();
+
+		var $this = $(this);
+		var $navbar = $this.parents(".navbar");
+		var $dropdown = $navbar.find(".navbar-dropdown");
+
+		$this.toggleClass( "active" );
+		$dropdown.toggleClass( "active" );
+
+		console.log("test");
+	});
+});

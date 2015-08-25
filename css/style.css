@@ -1,8 +1,16 @@
 html, body {
+	font-size: 20px;
 	height: 100%;
 }
 
+hr {
+	border-color: #333;
+	margin-bottom: 30px;
+	width: 50px;
+}
+
 .navbar {
+	font-size: 14px;
 	margin-bottom: 0;
 }
 
@@ -20,23 +28,72 @@ html, body {
     text-decoration: underline;
 }
 
+.navbar-dropdown {
+	display: block;
+	max-height: 0;
+	overflow: hidden;
+	padding-top: 0;
+	transition: all 400ms ease-out;
+}
+
+.navbar-dropdown.active {
+	max-height: 130px;
+	padding-top: 10px;
+}
+
+.navbar-nav {
+	margin: 0 -15px;
+}
+
+/*.navbar-toggle {
+	border: none;
+}*/
+
+.navbar-toggle .icon-bar {
+	width: 20px;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 5px;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
 .jumbotron {
-	background-image: url("../img/ben.JPG");
-	background-size: 100%;
+	background-image: url("../img/forest.jpeg");
+	background-position: 50% 100%;
+	background-size: cover;
 	height: 100%;
-	margin-top: -50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	text-align: right;
 }
 
 #about {
+	margin-bottom: 50px;
 	text-align: center;
 }
 
 #projects {
+	background-color: #d2d7d3;
+	margin-bottom: 50px;
+	padding: 20px 0px 50px 0px;
 	text-align: center;
 }
 
+#projects img {
+	width: 100%;
+	height: auto;
+}
+
+#projects .col-md-4 {
+	margin-bottom: 30px;
+}
+
 #contact {
+	margin-bottom: 50px;
 	text-align: center;
 }
 
@@ -65,13 +122,20 @@ html, body {
 }
 
 footer {
-	background-color: #f2f1ef;
+	background-color: #d2d7d3;
+	font-size: 14px;
 	height: 150px;
 }
 
 footer p {
-	color: #bfbfbf;
+	color: #999;
 	margin: 0;
 	text-align: center;
 	padding: 65px 0;
+}
+
+@media screen and (min-width: 768px) {
+	.navbar-dropdown {
+		max-height: 50px;
+	}
 }
