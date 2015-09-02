@@ -10,6 +10,7 @@ $(document).ready(function() {
 		$dropdown.toggleClass( "active" );
 	});
 
+	// Enables scrollTo effect
 	$(document).on("click", ".navbar-nav a", function(event) {
 		event.preventDefault();
 
@@ -19,8 +20,6 @@ $(document).ready(function() {
 
 		$("body, html").animate({
 			scrollTop: destination
-		}, 500, "swing");
-
-		console.log(destination);
+		}, 1000, "easeInOutCubic");
 	});
 });
